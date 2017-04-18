@@ -9,7 +9,7 @@ $emailAddress=$_POST["email"]; //Get email address that has been entered
 $password=$_POST["password"]; //Get password that has been entered
 $mobileNumber=$_POST["phone"]; //Get mobile number that has been entered
 
-$sql = "INSERT INTO usersprofiles (UserName, EmailAddress, Password, MobileNumber) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."')";
+$sql = "INSERT INTO userprofiles (UserName, EmailAddress, Password, MobileNumber) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."')";
 $link->query($sql);
 
 echo $username;
