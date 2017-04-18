@@ -7,8 +7,6 @@
 <body>
     <div style="position: absolute; top: 10px; right: 10px; height: 145px;">
         <span>Username: </span><?php echo "<b>{$_SESSION["username"]}</b>"?><br>
-        <span>Account Number: </span><?php echo "<b>{$_SESSION["CustomerID"]}</b>"?>
-
     </div>
 
 </header>
