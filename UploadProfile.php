@@ -17,5 +17,6 @@ echo $username;
 echo $emailAddress;
 echo $password;
 echo $mobileNumber;
+echo $StudentName;
 
-header("location: RegisterSuccess.php");
+header("location: ProfileUploadedSuccess.php");
