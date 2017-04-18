@@ -12,6 +12,10 @@ $mobileNumber=$_POST["phone"]; //Get mobile number that has been entered
 $sql = "INSERT INTO users (UserName, EmailAddress, Password, MobileNumber) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."')";
 $link->query($sql);
 
+$sql = "INSERT INTO UserProfiles (UserName, EmailAddress, Password, MobileNumber) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."')";
+$link->query($sql);
+
+
 echo $username;
 echo $emailAddress;
 echo $password;

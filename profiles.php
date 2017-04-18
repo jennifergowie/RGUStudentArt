@@ -21,9 +21,6 @@
         <div style="position: absolute; top: 10px; right: 10px; height: 145px;">
 
             <span>Username: </span><?php echo "<b>{$_SESSION["username"]}</b>"?><br>
-            <span>CustomerID </span><?php echo "<b>{$_SESSION["CustomerID"]}</b>"?>
-
-
             <?php
 
             include("dbConnect.php");
@@ -34,7 +31,7 @@
              $row = mysqli_fetch_array($result);
              echo"<tr>";
              echo "<td>".$row['username']. "</td>";
-             echo "<td>this is loading</td>";
+             echo "<td></td>";
              echo "<td></td>";
              echo "<td></td>";
             ?>

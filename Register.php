@@ -37,11 +37,4 @@
 
     </body>
 
-    <footer>
-        <br>
-        <div class="container">
-            <p>&copy; 2017 textbookexchange.com</p>
-        </div>
-    </footer>
-
 </html>
