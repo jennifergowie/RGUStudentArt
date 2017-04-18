@@ -1,7 +1,5 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Jennygowie123
- * Date: 18/04/2017
- * Time: 12:15
- */
+
+<form enctype="multipart/form-data" action="add.php" method="POST">
+    <input type="file" name="photo"><br>
+    <input type="submit" value="Add">
+</form>
