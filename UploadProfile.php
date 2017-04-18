@@ -20,4 +20,4 @@ echo $password;
 echo $mobileNumber;
 echo $StudentName;
 
-header("location: ProfileUploadedSuccess.php");
+header("location: RegisterSuccess.php");
