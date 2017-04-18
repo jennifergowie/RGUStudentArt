@@ -15,22 +15,18 @@ $password=$_POST["password"]; //Get password that has been entered
 $sqlPassword = "SELECT Password FROM users WHERE UserName = '".$username."'"; //Setup SQL query to get password from username
 $userPasswordArray = $link->query($sqlPassword);  //Execute query to get password from username
 
-$sqlCustomerID = "SELECT CustomerID  FROM users WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
-$userCustomerIDArray = $link->query($sqlCustomerID);  //Execute query to get CustomerID from username
-
-$sqlStudentName = "SELECT MobileNumber FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
-$StudentName = $link->query($sqlStudentName);
+$sqlMobileNumberInfo = "SELECT MobileNumber FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
+$mobileNumber = $link->query($sqlMobileNumberInfo);
 
 $userPassword = getSingleValueFromDatabaseArray($userPasswordArray); //Get password from database array
-$userID= getSingleValueFromDatabaseArray($userCustomerIDArray); //Get CustomerID from database array
-$name =getSingleValueFromDatabaseArray($StudentName);
+$mobile =getSingleValueFromDatabaseArray($mobileNumber);
 
 
 if(checkPassword($password,$userPassword)) //Check if password is correct and act accordingly
 {
     $_SESSION["username"]=$username;
     $_SESSION["password"]=$password;
-    $_SESSION["StudentName"]=$name;
+    $_SESSION["MobileNumber"]=$mobile;
 
     header("location: /Home.php");
     exit();
