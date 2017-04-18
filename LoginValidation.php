@@ -12,22 +12,39 @@ include("dbConnect.php");    //Establish database connection
 $username=$_POST["username"]; //Get username that has been entered
 $password=$_POST["password"]; //Get password that has been entered
 
-$sqlPassword = "SELECT Password FROM users WHERE UserName = '".$username."'"; //Setup SQL query to get password from username
-$userPasswordArray = $link->query($sqlPassword);  //Execute query to get password from username
+$sqlPassword = "SELECT Password FROM users WHERE UserName = '".$username."'";
+$userPasswordArray = $link->query($sqlPassword);
+$userPassword = getSingleValueFromDatabaseArray($userPasswordArray);
 
-$sqlMobileNumberInfo = "SELECT MobileNumber FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
-$mobileNumber = $link->query($sqlMobileNumberInfo);
+$studentNameQuery = "SELECT StudentName FROM userprofiles WHERE UserName = '".$username."'";
+$studentNameinfo = $link->query($studentNameQuery);
+$studentName = getSingleValueFromDatabaseArray($studentNameinfo);
 
-$userPassword = getSingleValueFromDatabaseArray($userPasswordArray); //Get password from database array
-$mobile =getSingleValueFromDatabaseArray($mobileNumber);
+$emailAddressQuery = "SELECT EmailAddress FROM userprofiles WHERE UserName = '".$username."'";
+$emailAddressInfo = $link->query($emailAddressQuery);
+$emailAddress = getSingleValueFromDatabaseArray($emailAddressInfo);
 
+$sqlMobileNumberQuery = "SELECT MobileNumber FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
+$mobileNumberInfo = $link->query($sqlMobileNumberQuery);
+$mobileNumber =getSingleValueFromDatabaseArray($mobileNumberInfo);
+
+$sqlCourseQuery = "SELECT Course FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
+$courseInfo = $link->query($sqlCourseQuery);
+$course =getSingleValueFromDatabaseArray($courseInfo);
+
+$sqlYearQuery = "SELECT Year FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
+$yearInfo = $link->query($sqlYearQuery);
+$year =getSingleValueFromDatabaseArray($yearInfo);
 
 if(checkPassword($password,$userPassword)) //Check if password is correct and act accordingly
 {
     $_SESSION["username"]=$username;
     $_SESSION["password"]=$password;
-    $_SESSION["mobileNumber"]=$mobile;
-
+    $_SESSION["studentName"]=$studentName;
+    $_SESSION["email"]=$emailAddress;
+    $_SESSION["mobileNumber"]=$mobileNumber;
+    $_SESSION["course"]=$course;
+    $_SESSION["year"]=$year;
     header("location: /Home.php");
     exit();
 }
@@ -38,6 +55,12 @@ else
 }
 
 $link->close(); //Close  database link
+
+
+function returnUserDetails(){
+
+}
+
 
 function getSingleValueFromDatabaseArray($dbArray) //Function to get password from database array
 {
