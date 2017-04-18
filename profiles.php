@@ -18,8 +18,6 @@
         <br/>
         <img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"><br/>
         <br/>
-        <div style="position: absolute; top: 10px; right: 10px; height: 145px;">
-
             <?php
             include("LoggedInHeader.php");
             include("dbConnect.php");
