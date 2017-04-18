@@ -13,7 +13,7 @@ $Course = $_POST["Course"];
 $Year = $_POST["Year"];
 $ProfilePicture =$POST["ProfilePicture"];
 
-$sql = "INSERT INTO userprofiles (UserName, EmailAddress, Password, MobileNumber,StudentName,Course,Year) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."', '".$StudentName."', '".$Course."', '".$Year."')";
+$sql = "INSERT INTO userprofiles (UserName, EmailAddress, Password, MobileNumber,StudentName,Course,Year,ProfilePicture) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."', '".$StudentName."', '".$Course."', '".$Year."', '".$ProfilePicture.")";
 $link->query($sql);
 
 echo $username;
@@ -23,5 +23,6 @@ echo $mobileNumber;
 echo $StudentName;
 echo $Course;
 echo $Year;
+
 
 header("location: ProfileUploadedSuccess.php");
