@@ -11,7 +11,7 @@
         <span>Password </span><?php echo "<b>{$_SESSION["StudentName"]}</b>"?><br>
 
         <table>
-            <tr><td>In the table {$_SESSION["username"]}</td></tr>
+            <tr><td><?php echo "<b>{$_SESSION["StudentName"]}</b>"?></td></tr>
         </table>
 </body>
 </html>
