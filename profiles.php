@@ -18,14 +18,12 @@
             <input type="email" name="email" placeholder="Email Address" onfocus="this.placeholder=''" onblur="this.placeholder='Email Address'" required/>
             <input type="password" name="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" required/>
             <input type="tel" name="phone" placeholder="Mobile Number" onfocus="this.placeholder=''" onblur="this.placeholder='Mobile Number'" required/>
-                <input type="name" name="name" placeholder="name" onfocus="this.placeholder=''" onblur="this.placeholder='name'" required/>
-                <input type="course" name="course" placeholder="course" onfocus="this.placeholder=''" onblur="this.placeholder='course'" required/>
-                <input type="year" name="year" placeholder="year" onfocus="this.placeholder=''" onblur="this.placeholder='year'" required/>
-                <br><br>
+            <input type="StudentName" name="StudentName" placeholder="StudentName" onfocus="this.placeholder=''" onblur="this.placeholder='name'" required/>
+            <input type="course" name="course" placeholder="course" onfocus="this.placeholder=''" onblur="this.placeholder='course'" required/>
+            <input type="year" name="year" placeholder="year" onfocus="this.placeholder=''" onblur="this.placeholder='year'" required/>
+            <br><br>
             <input class="inputButton" type="submit" name="submit" value="Create your profile"/>
         </form>
-
-        <p>Already have an account? <a href="login.php">Click here</a> to login</p>
     </div>
 
     </main>
