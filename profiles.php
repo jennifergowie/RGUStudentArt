@@ -20,17 +20,16 @@
         <br/>
         <div style="position: absolute; top: 10px; right: 10px; height: 145px;">
 
-            <span>Username: </span><?php echo "<b>{$_SESSION["username"]}</b>"?><br>
             <?php
-
+            include("LoggedInHeader.php");
             include("dbConnect.php");
 
-             $sql = "SELECT * FROM userProfiles where {$_SESSION["username"]} = userProfiles.username";
+             $sql = "SELECT * FROM userprofiles where {$_SESSION["username"]} = userprofiles.username";
              echo "<th>User name</th>";
              $result = $link->query($sql);   //Execute query
              $row = mysqli_fetch_array($result);
              echo"<tr>";
-             echo "<td>".$row['username']. "</td>";
+             echo "<td>".$row['username']."</td>";
              echo "<td></td>";
              echo "<td></td>";
              echo "<td></td>";
