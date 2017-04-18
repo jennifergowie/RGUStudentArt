@@ -8,13 +8,17 @@
     <title>Login Page</title>
     <link rel="stylesheet" type="text/css" href="Resources/CSS/styleSheet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rakkas|Quicksand">
-
+</head>
     <div class="newUserbg">
         <br/>
         <img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo">
+
+        <body>
+
         <?php
         include("LoggedInHeader.php");
         ?>
+
         <h2>Create New Account</h2>
             <form action="UploadProfile.php" method="post" autocomplete="off" enctype="multipart/form-data">
             <input type="username" name="username" placeholder="Username" onfocus="this.placeholder=''" onblur="this.placeholder='Username'" required/>
