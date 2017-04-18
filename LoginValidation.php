@@ -18,7 +18,7 @@ $userPasswordArray = $link->query($sqlPassword);  //Execute query to get passwor
 $sqlCustomerID = "SELECT CustomerID  FROM users WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
 $userCustomerIDArray = $link->query($sqlCustomerID);  //Execute query to get CustomerID from username
 
-$sqlStudentName = "SELECT MobileNumber  FROM users WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
+$sqlStudentName = "SELECT MobileNumber FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
 $StudentName = $link->query($sqlStudentName);
 
 $userPassword = getSingleValueFromDatabaseArray($userPasswordArray); //Get password from database array
@@ -58,7 +58,7 @@ function getSingleValueFromDatabaseArray($dbArray) //Function to get password fr
 
 }
 
-function checkPassword($password, $userPassword) // Function to cehck input password against password in database
+function checkPassword($password, $userPassword) // Function to check input password against password in database
 {
 
 
