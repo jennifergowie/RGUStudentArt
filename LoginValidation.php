@@ -26,7 +26,7 @@ if(checkPassword($password,$userPassword)) //Check if password is correct and ac
 {
     $_SESSION["username"]=$username;
     $_SESSION["password"]=$password;
-    $_SESSION["MobileNumber"]=$mobile;
+    $_SESSION["mobileNumber"]=$mobile;
 
     header("location: /Home.php");
     exit();
