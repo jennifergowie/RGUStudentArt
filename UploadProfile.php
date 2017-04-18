@@ -10,8 +10,9 @@ $password=$_POST["password"]; //Get password that has been entered
 $mobileNumber=$_POST["phone"]; //Get mobile number that has been entered
 $StudentName =$_POST["StudentName"];
 $Course = $_POST["Course"];
+$Year = $_POST["Year"];
 
-$sql = "INSERT INTO userprofiles (UserName, EmailAddress, Password, MobileNumber,StudentName,Course) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."', '".$StudentName."', '".$Course."')";
+$sql = "INSERT INTO userprofiles (UserName, EmailAddress, Password, MobileNumber,StudentName,Course,Year) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."', '".$StudentName."', '".$Course."', '".$Year."')";
 $link->query($sql);
 
 echo $username;
@@ -20,5 +21,6 @@ echo $password;
 echo $mobileNumber;
 echo $StudentName;
 echo $Course;
+echo $Year;
 
 header("location: ProfileUploadedSuccess.php");
