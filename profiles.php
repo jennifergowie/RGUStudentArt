@@ -34,7 +34,7 @@
              $row = mysqli_fetch_array($result);
              echo"<tr>";
              echo "<td>".$row['username']. "</td>";
-             echo "<td></td>";
+             echo "<td>this is loading</td>";
              echo "<td></td>";
              echo "<td></td>";
             ?>
