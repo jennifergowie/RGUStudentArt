@@ -12,8 +12,7 @@ $name = $_POST["name"];
 $course =$POST["course"];
 $courseyear =$POST["year"];
 
-$sql = "INSERT INTO usersprofiles (UserName, EmailAddress, Password, MobileNumber,StudentName,Course,CourseYear)
-VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."', '".$name."', '".$course."', '".$courseyear."')";
+$sql = "INSERT INTO usersprofiles (UserName, EmailAddress, Password, MobileNumber,StudentName,Course,CourseYear)VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."', '".$name."', '".$course."', '".$courseyear."')";
 $link->query($sql);
 
 echo $username;
@@ -24,4 +23,4 @@ echo $name;
 echo $course;
 echo $courseyear;
 
-header("location: RegisterSuccess.php");
+header("location: ProfileUploadedSuccess.php");

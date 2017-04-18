@@ -22,7 +22,7 @@
                 <input type="course" name="course" placeholder="course" onfocus="this.placeholder=''" onblur="this.placeholder='course'" required/>
                 <input type="year" name="year" placeholder="year" onfocus="this.placeholder=''" onblur="this.placeholder='year'" required/>
                 <br><br>
-            <input class="inputButton" type="submit" name="submit" value="Create Your Account"/>
+            <input class="inputButton" type="submit" name="submit" value="Create you profile"/>
         </form>
 
         <p>Already have an account? <a href="login.php">Click here</a> to login</p>
