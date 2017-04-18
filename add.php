@@ -2,10 +2,10 @@
 
 //This is the directory where images will be saved
 $target = "images/";
-$target = $target . basename( $_FILES['photo']['name']);
+$target = $target . basename( $_FILES['photo']);
 
 //This retrieves all the other information from the form
-$pic=($_FILES['photo']['name']);
+$pic=($_FILES['photo']);
 
 include ("dbConnect.php");
 //Writes the information to the database
@@ -21,6 +21,6 @@ if(move_uploaded_file($_FILES['photo']['tmp_name'], $target))
 else {
 
     //Gives an error if it is not ok
-    echo "Sorry, there was a problem uploading your file.";
+    echo "Sorry chum, there was a problem uploading your file.";
 }
 ?>
