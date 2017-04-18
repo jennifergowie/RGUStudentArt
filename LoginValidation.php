@@ -55,8 +55,7 @@ $userPassword = getSingleValueFromDatabaseArray($userPasswordArray);
 
 $studentNameQuery = "SELECT StudentName FROM userprofiles WHERE UserName = '".$username."'";
 $studentNameinfo = $link->query($studentNameQuery);
-//$studentName = getSingleValueFromDatabaseArray($studentNameinfo);
-$studentName = implode($studentNameinfo);
+$studentName = getSingleValueFromDatabaseArray($studentNameinfo);
 
 $emailAddressQuery = "SELECT EmailAddress FROM userprofiles WHERE UserName = '".$username."'";
 $emailAddressInfo = $link->query($emailAddressQuery);
@@ -64,7 +63,8 @@ $emailAddress = getSingleValueFromDatabaseArray($emailAddressInfo);
 
 $sqlMobileNumberQuery = "SELECT MobileNumber FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
 $mobileNumberInfo = $link->query($sqlMobileNumberQuery);
-$mobileNumber =getSingleValueFromDatabaseArray($mobileNumberInfo);
+//$mobileNumber =getSingleValueFromDatabaseArray($mobileNumberInfo);
+$mobileNumber =implode($mobileNumberInfo);
 
 $sqlCourseQuery = "SELECT Course FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
 $courseInfo = $link->query($sqlCourseQuery);
