@@ -34,12 +34,13 @@
             <br/>
             <br/>
             <span>Don't have an account? Click <a href="Register.php">here</a> to register</span>
+            <?php
+            include("resources/HeaderandFooterSections/RGUArtistFooterSection.php");
+            ?>
+
         </div>
         </div>
 
-        <?php
-        include("resources/HeaderandFooterSections/RGUArtistFooterSection.php");
-        ?>
 
         </main>
     </body>
