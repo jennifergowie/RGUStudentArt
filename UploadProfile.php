@@ -23,6 +23,6 @@ echo $mobileNumber;
 echo $StudentName;
 echo $Course;
 echo $Year;
-
+echo $ProfilePicture;
 
 header("location: ProfileUploadedSuccess.php");
