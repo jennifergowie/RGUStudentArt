@@ -28,10 +28,9 @@ $userID= getSingleValueFromDatabaseArray($userCustomerIDArray); //Get CustomerID
 
 if(checkPassword($password,$userPassword)) //Check if password is correct and act accordingly
 {
-
     $_SESSION["username"]=$username;
-    $_SESSION["emailaddress"]=$password;
-    $_SESSION["StudentName"]=$StudentName;
+    $_SESSION["password"]=$password;
+
     header("location: /Home.php");
     exit();
 }
