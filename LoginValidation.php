@@ -1,4 +1,41 @@
 <?php
+function getSingleValueFromDatabaseArray($dbArray) //Function to get password from database array
+{
+
+    foreach ($dbArray as $key => $val)
+    {
+        foreach ($val as $value)
+        {
+            $output= $value;
+        }
+    }
+
+    return $output;
+
+}
+
+function checkPassword($password, $userPassword) // Function to check input password against password in database
+{
+    if($password==$userPassword)
+    {
+        return True;
+    }
+
+    else
+    {
+        return false;
+    }
+}
+
+
+function destroySession()
+{
+    session_unset();
+    session_destroy();
+    header("location: login.php");
+    exit();
+
+}
 
 session_start(); // Start Session
 
@@ -18,7 +55,8 @@ $userPassword = getSingleValueFromDatabaseArray($userPasswordArray);
 
 $studentNameQuery = "SELECT StudentName FROM userprofiles WHERE UserName = '".$username."'";
 $studentNameinfo = $link->query($studentNameQuery);
-$studentName = getSingleValueFromDatabaseArray($studentNameinfo);
+//$studentName = getSingleValueFromDatabaseArray($studentNameinfo);
+$studentName = implode($studentNameinfo);
 
 $emailAddressQuery = "SELECT EmailAddress FROM userprofiles WHERE UserName = '".$username."'";
 $emailAddressInfo = $link->query($emailAddressQuery);
@@ -36,7 +74,7 @@ $sqlYearQuery = "SELECT Year FROM userprofiles WHERE UserName = '".$username."'"
 $yearInfo = $link->query($sqlYearQuery);
 $year =getSingleValueFromDatabaseArray($yearInfo);
 
-if(checkPassword($password,$userPassword)) //Check if password is correct and act accordingly
+if(checkPassword($password,$userPassword))
 {
     $_SESSION["username"]=$username;
     $_SESSION["password"]=$password;
@@ -54,54 +92,8 @@ else
     destroySession();
 }
 
-$link->close(); //Close  database link
+$link->close();
 
-
-function returnUserDetails(){
-
-}
-
-
-function getSingleValueFromDatabaseArray($dbArray) //Function to get password from database array
-{
-
-    foreach ($dbArray as $key => $val)
-    {
-        foreach ($val as $value)
-        {
-            $output= $value;
-        }
-    }
-
-    return $output;
-
-}
-
-function checkPassword($password, $userPassword) // Function to check input password against password in database
-{
-
-
-   if($password==$userPassword)
-    {
-        return True;
-    }
-
-    else
-    {
-        return false;
-    }
-}
-
-
-function destroySession()
-
-{
-    session_unset();
-    session_destroy();
-    header("location: login.php");
-    exit();
-
-}
 
 
 ?>

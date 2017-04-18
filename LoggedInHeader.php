@@ -13,7 +13,7 @@
         <table>
             <tr><td>Student Name</td><td><?php echo "<b>{$_SESSION["studentName"]}</b>"?></td></tr>
             <tr><td>Mobile Number</td><td><?php echo "<b>{$_SESSION["mobileNumber"]}</b>"?></td></tr>
-            <tr><td><td>Email</td><td><?php echo "<b>{$_SESSION["email"]}</b>"?></td></tr>
+            <tr><td>Email</td><td><?php echo "<b>{$_SESSION["email"]}</b>"?></td></tr>
             <tr><td>Course</td><td><?php echo "<b>{$_SESSION["course"]}</b>"?></td></tr>
             <tr><td>Year</td><td><?php echo "<b>{$_SESSION["year"]}</b>"?></td></tr>
         </table>
