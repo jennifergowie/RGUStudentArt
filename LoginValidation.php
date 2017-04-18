@@ -23,14 +23,14 @@ $StudentName = $link->query($sqlStudentName);
 
 $userPassword = getSingleValueFromDatabaseArray($userPasswordArray); //Get password from database array
 $userID= getSingleValueFromDatabaseArray($userCustomerIDArray); //Get CustomerID from database array
-
+$name =getSingleValueFromDatabaseArray($StudentName);
 
 
 if(checkPassword($password,$userPassword)) //Check if password is correct and act accordingly
 {
     $_SESSION["username"]=$username;
     $_SESSION["password"]=$password;
-    $_SESSION["StudentName"]=$StudentName;
+    $_SESSION["StudentName"]=$name;
 
     header("location: /Home.php");
     exit();
