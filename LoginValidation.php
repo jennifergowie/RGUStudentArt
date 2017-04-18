@@ -27,7 +27,6 @@ if(checkPassword($password,$userPassword)) //Check if password is correct and ac
     $_SESSION["username"]=$username;
 
     header("location: /Home.php");
-    header("location:/UploadProfile.php");
     exit();
 }
 
