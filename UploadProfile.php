@@ -11,9 +11,9 @@ $mobileNumber=$_POST["phone"]; //Get mobile number that has been entered
 $StudentName =$_POST["StudentName"];
 $Course = $_POST["Course"];
 $Year = $_POST["Year"];
-$ProfilePicture =$POST["ProfilePicture"];
 
-$sql = "INSERT INTO userprofiles (UserName, EmailAddress, Password, MobileNumber,StudentName,Course,Year,ProfilePicture) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."', '".$StudentName."', '".$Course."', '".$Year."', '".$ProfilePicture.")";
+
+$sql = "INSERT INTO userprofiles (UserName, EmailAddress, Password, MobileNumber,StudentName,Course,Year) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."', '".$StudentName."', '".$Course."', '".$Year."')";
 $link->query($sql);
 
 echo $username;
@@ -23,6 +23,6 @@ echo $mobileNumber;
 echo $StudentName;
 echo $Course;
 echo $Year;
-echo $ProfilePicture;
+
 
 header("location: ProfileUploadedSuccess.php");

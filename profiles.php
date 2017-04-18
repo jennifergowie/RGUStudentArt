@@ -21,7 +21,7 @@
             <input type="StudentName" name="StudentName" placeholder="Student Name" onfocus="this.placeholder=''" onblur="this.placeholder='StudentName'" required/>
             <input type="Course" name="Course" placeholder="Course" onfocus="this.placeholder=''" onblur="this.placeholder='Course'" required/>
             <input type="Year" name="Year" placeholder="Year" onfocus="this.placeholder=''" onblur="this.placeholder='Year'" required/>
-                <input type="file" name="ProfilePicuture" id="ProfilePicuture">
+            <input type="file" name="ProfilePicuture" id="ProfilePicuture">
 
 
                 <br><br>
