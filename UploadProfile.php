@@ -17,4 +17,4 @@ echo $emailAddress;
 echo $password;
 echo $mobileNumber;
 
-header("location: UploadProfile.php");
+header("location: RegisterSuccess.php");
