@@ -27,7 +27,7 @@
                 <input type="password" name="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" required/>
                 <input type="tel" name="phone" placeholder="Mobile Number" onfocus="this.placeholder=''" onblur="this.placeholder='Mobile Number'" required/>
                 <br><br>
-                <input class="inputButton" type="submit" name="submit" value="Create Your Account"/>
+                <input class="inputButton" type="submit" name="submit" value="Create Your Account">
             </form>
 
             <p>Already have an account? <a href="login.php">Click here</a> to login</p>
