@@ -7,6 +7,7 @@
 <body>
         <span>Current User </span><?php echo "<b>{$_SESSION["username"]}</b>"?><br>
         <span>Password </span><?php echo "<b>{$_SESSION["password"]}</b>"?><br>
+        <span>Password </span><?php echo "<b>{$_SESSION["StudentName"]}</b>"?><br>
     </div>
 
 </header>

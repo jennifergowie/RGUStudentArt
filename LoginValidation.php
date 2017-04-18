@@ -30,6 +30,7 @@ if(checkPassword($password,$userPassword)) //Check if password is correct and ac
 {
     $_SESSION["username"]=$username;
     $_SESSION["password"]=$password;
+    $_SESSION["StudentName"]="Jennifer Gowie";
 
     header("location: /Home.php");
     exit();
