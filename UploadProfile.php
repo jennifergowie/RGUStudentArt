@@ -16,6 +16,7 @@ $Year = $_POST["Year"];
 $sql = "INSERT INTO userprofiles (UserName, EmailAddress, Password, MobileNumber,StudentName,Course,Year) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."', '".$StudentName."', '".$Course."', '".$Year."')";
 $link->query($sql);
 
+
 echo $username;
 echo $emailAddress;
 echo $password;
@@ -24,5 +25,5 @@ echo $StudentName;
 echo $Course;
 echo $Year;
 
-
+$_SESSION["username"]=$username;
 header("location: ProfileUploadedSuccess.php");

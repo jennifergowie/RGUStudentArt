@@ -9,3 +9,4 @@ $sql = "INSERT INTO images (pic) VALUES ('".$image."')";
 $link->query($sql);
 echo $image;
 
+
