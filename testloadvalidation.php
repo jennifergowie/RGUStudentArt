@@ -12,7 +12,7 @@ include("dbConnect.php");    //Establish database connection
 $username=$_POST["username"]; //Get username that has been entered
 $password=$_POST["password"]; //Get password that has been entered
 
-$sqlPassword = "SELECT Password FROM users WHERE UserName = '".$username."'"; //Setup SQL query to get password from username
+$sqlPassword = "SELECT Password FROM users WHERE username = '".$username."'"; //Setup SQL query to get password from username
 $userPasswordArray = $link->query($sqlPassword);  //Execute query to get password from username
 
 $sqlCustomerID = "SELECT CustomerID  FROM users WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
