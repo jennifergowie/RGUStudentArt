@@ -18,7 +18,7 @@
     <?php
 
     include("LoadUserProfile.php");
-    //include ("LoadImages.php");
+    include ("LoadImages.php");
     //
 ?>
 
