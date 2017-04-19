@@ -16,8 +16,8 @@
     <h2>Welcome RGU Student Art</h2>
 
     <?php
-    //include ("TempLoadImagesSQL.php");
-    //include("LoadUserProfile.php");
+
+    include("LoadUserProfile.php");
     //include ("LoadImages.php");
     //
 ?>
