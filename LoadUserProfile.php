@@ -11,7 +11,7 @@
 <span>Mobile Number </span><?php echo "<b>{$_SESSION["mobileNumber"]}</b>"?><br>
 
 <table>
-    <tr><td>Student Name</td><td><?php echo "<b>{$_SESSION["studentName"]}</b>"?></td></tr>
+    <tr><td><div contenteditable>Student Name</div></td><td><?php echo "<b>{$_SESSION["studentName"]}</b>"?></td></tr>
     <tr><td>Mobile Number</td><td><?php echo "<b>{$_SESSION["mobileNumber"]}</b>"?></td></tr>
     <tr><td>Email</td><td><?php echo "<b>{$_SESSION["email"]}</b>"?></td></tr>
     <tr><td>Course</td><td><?php echo "<b>{$_SESSION["course"]}</b>"?></td></tr>
