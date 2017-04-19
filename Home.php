@@ -16,9 +16,9 @@
     <h2>Welcome RGU Student Art</h2>
 
     <?php
-    include ("TestLoadImagesSQL.php");
+    //include ("TempLoadImagesSQL.php");
     include("LoadUserProfile.php");
-    include ("LoadImages.php");
+    //include ("LoadImages.php");
     ?>
 
     <h4>Please click <a href="profiles.php">here </a> to edit/review your personal profile</h4>
