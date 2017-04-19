@@ -1,41 +1,4 @@
 <?php
-function convertToStringToDisplay($items)
-//for this http://php.net/manual/en/control-structures.foreach.php was referenced.
-{
-    foreach ($items as $key => $val)
-    {
-        foreach ($val as $value)
-        {
-            $output= $value;
-        }
-    }
-
-    return $output;
-
-}
-
-function passwordCompare($password, $enteredPassword){
-    //returns true if the passwords match
-    if($password==$enteredPassword)
-    {
-        return true;
-    }
-
-    else
-    {
-        return false;
-    }
-}
-
-
-function destroySession()
-{
-    session_unset();
-    session_destroy();
-    header("location: login.php");
-    exit();
-
-}
 
 session_start(); // Start Session
 
@@ -91,4 +54,41 @@ if(empty($_POST) or empty($_POST["username"]) or empty($_POST["password"]))
 
 $link->close();
 
+function convertToStringToDisplay($items)
+//for this http://php.net/manual/en/control-structures.foreach.php was referenced.
+{
+    foreach ($items as $key => $val)
+    {
+        foreach ($val as $value)
+        {
+            $output= $value;
+        }
+    }
+
+    return $output;
+
+}
+
+function passwordCompare($password, $enteredPassword){
+    //returns true if the passwords match
+    if($password==$enteredPassword)
+    {
+        return true;
+    }
+
+    else
+    {
+        return false;
+    }
+}
+
+
+function destroySession()
+{
+    session_unset();
+    session_destroy();
+    header("location: login.php");
+    exit();
+
+}
 ?>
