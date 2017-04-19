@@ -17,9 +17,10 @@
 
     <?php
     //include ("TempLoadImagesSQL.php");
-    include("LoadUserProfile.php");
+    //include("LoadUserProfile.php");
     //include ("LoadImages.php");
-    ?>
+    //
+?>
 
     <h4>Please click <a href="profiles.php">here </a> to edit/review your personal profile</h4>
     <h4>Please click <a href="LoadImages.php">here </a> to upload a profile picture</h4>
