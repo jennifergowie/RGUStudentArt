@@ -17,7 +17,7 @@
 
     <?php
 
-    include("LoggedInHeader.php");
+    include("LoadUserProfile.php");
     //include ("LoadImages.php");
     //
 ?>
