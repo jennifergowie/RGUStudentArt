@@ -19,7 +19,7 @@
         <img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"><br/>
         <br/>
 
-        <form action="LoginValidation.php" method="post">
+        <form action="testloadvalidation.php" method="post">
 
             <h2>Welcome to RGU Artist</h2>
 
