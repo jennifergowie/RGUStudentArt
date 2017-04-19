@@ -73,7 +73,7 @@ if(empty($_POST) or empty($_POST["username"]) or empty($_POST["password"]))
     $yearInfo = $link->query($sqlYearQuery);
     $year =convertToStringToDisplay($yearInfo);
 
-    if(passwordCompare($password,$userPassword) == true){
+    if(passwordCompare($password,$userPassword)){
         $_SESSION["username"]=$username;
         $_SESSION["password"]=$password;
         $_SESSION["studentName"]=$studentName;
