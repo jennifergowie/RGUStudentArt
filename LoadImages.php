@@ -14,6 +14,7 @@
         buttonLoadFile.onclick = loadImageFileAsURL;
         buttonLoadFile.textContent = "Load Selected File";
         document.body.appendChild(buttonLoadFile);
+
     }
 
     function loadImageFileAsURL()
