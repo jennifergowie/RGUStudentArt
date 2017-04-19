@@ -73,7 +73,7 @@ function passwordCompare($password, $enteredPassword){
     //returns true if the passwords match
     if($password==$enteredPassword)
     {
-        return true;
+        return True;
     }
 
     else
