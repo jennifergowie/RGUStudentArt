@@ -16,7 +16,7 @@
         <body>
 
         <?php
-        include("LoggedInHeader.php");
+        include("LoadUserProfile.php");
         ?>
 
         <h2>Create New Account</h2>
