@@ -14,29 +14,29 @@ if(empty($_POST) or empty($_POST["username"]) or empty($_POST["password"]))
 
     $sqlPassword = "SELECT Password FROM users WHERE UserName = '".$username."'";
     $userPasswordArray = $link->query($sqlPassword);
-    $userPassword = convertToStringToDisplay($userPasswordArray);
+    $userPassword = getSingleValueFromDatabaseArray($userPasswordArray);
 
     $studentNameQuery = "SELECT StudentName FROM userprofiles WHERE UserName = '".$username."'";
     $studentNameinfo = $link->query($studentNameQuery);
-    $studentName = convertToStringToDisplay($studentNameinfo);
+    $studentName =getSingleValueFromDatabaseArray($studentNameinfo);
 
     $emailAddressQuery = "SELECT EmailAddress FROM userprofiles WHERE UserName = '".$username."'";
     $emailAddressInfo = $link->query($emailAddressQuery);
-    $emailAddress = convertToStringToDisplay($emailAddressInfo);
+    $emailAddress = getSingleValueFromDatabaseArray($emailAddressInfo);
 
     $sqlMobileNumberQuery = "SELECT MobileNumber FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
     $mobileNumberInfo = $link->query($sqlMobileNumberQuery);
-    $mobileNumber =convertToStringToDisplay($mobileNumberInfo);
+    $mobileNumber =getSingleValueFromDatabaseArray($mobileNumberInfo);
 
     $sqlCourseQuery = "SELECT Course FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
     $courseInfo = $link->query($sqlCourseQuery);
-    $course =convertToStringToDisplay($courseInfo);
+    $course =getSingleValueFromDatabaseArray($courseInfo);
 
     $sqlYearQuery = "SELECT Year FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
     $yearInfo = $link->query($sqlYearQuery);
-    $year =convertToStringToDisplay($yearInfo);
+    $year =getSingleValueFromDatabaseArray($yearInfo);
 
-    if(passwordCompare($password,$userPassword)){
+    if(checkPassword($password,$userPassword)){
         $_SESSION["username"]=$username;
         $_SESSION["password"]=$password;
         $_SESSION["studentName"]=$studentName;
@@ -54,10 +54,10 @@ if(empty($_POST) or empty($_POST["username"]) or empty($_POST["password"]))
 
 $link->close();
 
-function convertToStringToDisplay($items)
-//for this http://php.net/manual/en/control-structures.foreach.php was referenced.
+function getSingleValueFromDatabaseArray($dbArray) //Function to get password from database array
 {
-    foreach ($items as $key => $val)
+
+    foreach ($dbArray as $key => $val)
     {
         foreach ($val as $value)
         {
@@ -69,9 +69,11 @@ function convertToStringToDisplay($items)
 
 }
 
-function passwordCompare($password, $enteredPassword){
-    //returns true if the passwords match
-    if($password==$enteredPassword)
+function checkPassword($password, $userPassword) // Function to cehck input password against password in database
+{
+
+
+    if($password==$userPassword)
     {
         return True;
     }
@@ -84,6 +86,7 @@ function passwordCompare($password, $enteredPassword){
 
 
 function destroySession()
+
 {
     session_unset();
     session_destroy();
@@ -91,4 +94,6 @@ function destroySession()
     exit();
 
 }
+
+
 ?>
