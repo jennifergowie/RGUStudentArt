@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <!-- NB: add comments, sort formatting! -->
@@ -6,7 +5,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Registration Page</title>
+        <title>RGU Student Art - Registration Page</title>
         <link rel="stylesheet" type="text/css" href="Resources/CSS/styleSheet.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rakkas|Quicksand">
 

@@ -5,21 +5,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login Page</title>
+    <title>RGU Student Art -Create User Profile</title>
     <link rel="stylesheet" type="text/css" href="Resources/CSS/styleSheet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rakkas|Quicksand">
 </head>
-    <div class="newUserbg">
-        <br/>
-        <img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo">
-
+    <div class="bg">
         <body>
-
+        <main>
+            <div class="bg">
+                <br/>
+                <img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"><br/>
+                <br/>
         <?php
-        include("LoadUserProfile.php");
+        //include("LoadUserProfile.php");
         ?>
 
-        <h2>Create New Account</h2>
+        <h2>Create your profile</h2>
             <form action="UploadProfile.php" method="post" autocomplete="off" enctype="multipart/form-data">
             <input type="username" name="username" placeholder="Username" onfocus="this.placeholder=''" onblur="this.placeholder='Username'" required/>
             <input type="email" name="email" placeholder="Email Address" onfocus="this.placeholder=''" onblur="this.placeholder='Email Address'" required/>
@@ -31,10 +32,14 @@
             <br><br>
             <input class="inputButton" type="submit" name="submit" value="Create your profile"/>
         </form>
+
+            <?php
+            include("resources/HeaderandFooterSections/RGUArtistFooterSection.php");
+            ?>
+
+        </main>
+        </body>
     </div>
-
-    </main>
-
-    </body>
+</html>
 
 </html>

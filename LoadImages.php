@@ -23,7 +23,6 @@
         if (filesSelected.length > 0)
         {
             var fileToLoad = filesSelected[0];
-
             if (fileToLoad.type.match("image.*"))
             {
                 var fileReader = new FileReader();

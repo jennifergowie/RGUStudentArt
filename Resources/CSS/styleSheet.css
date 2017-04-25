@@ -1,11 +1,4 @@
 /* NB: add comments throughout! */
-#dvPreview
-{
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
-    min-height: 400px;
-    min-width: 400px;
-    display: none;
-}
 
 body {
     max-width: 960px;
@@ -22,22 +15,19 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-.profiles{
-
-}
 .bg {
-     /* The image used */
-     background-image: url("../Images/RguPaintImage-1.jpg");
+    /* The image used */
+    background-image: url("../Images/RguPaintImage-1.jpg");
 
-     /* Full height */
-     height: 100%;
+    /* Full height */
+    height: 100%;
 
-     /* Center and scale the image nicely */
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
- }
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .logOutBg{
     /* The image used */
     background-image: url("../Images/logoutImage.jpg");
@@ -89,7 +79,7 @@ img.navBarIcon
     width: 50px;
 }
 
-input[type=username], input[type=firstName], input[type=surname], input[type=email], input[type=password], input[type=course], input[type=tel] {
+input[type=username], input[type=tel],input[type=surname], input[type=email], input[type=password], input[type=course] {
     border: 2px solid lightblue;
     border-radius: 5px;
     width: 100%;
@@ -206,7 +196,3 @@ p{
     flex-wrap: nowrap;
 }
 
-.grid-66
-{
-
-}

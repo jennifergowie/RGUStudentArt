@@ -6,7 +6,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>New Account Created</title>
+        <title>RGU Student Art -New Profile Confirmation</title>
         <link rel="stylesheet" type="text/css" href="Resources/CSS/styleSheet.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rakkas|Quicksand">
 
