@@ -11,6 +11,11 @@
     <link rel="stylesheet" type="text/css" href="Resources/CSS/styleSheet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rakkas|Quicksand">
 </head>
+
+<?php
+include("LoadUserProfile.php.php");
+
+?>
     <div class="bg">
         <body>
         <main>
