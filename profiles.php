@@ -17,7 +17,7 @@
                 <img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"><br/>
                 <br/>
         <?php
-        //include("LoadUserProfile.php");
+        include("LoadUserProfile.php");
         ?>
 
         <h2>Create your profile</h2>
