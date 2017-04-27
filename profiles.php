@@ -13,7 +13,7 @@
 </head>
 
 <?php
-include("LoadUserProfile.php.php");
+include("LoadUserProfile.php");
 
 ?>
     <div class="bg">
