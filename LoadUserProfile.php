@@ -6,9 +6,9 @@
 </head>
 <body>
 
-<span>Current User </span><?php echo "<b>{$_SESSION["username"]}</b>"?><br>
-<span>Password </span><?php echo "<b>{$_SESSION["password"]}</b>"?><br>
-<span>Mobile Number </span><?php echo "<b>{$_SESSION["mobileNumber"]}</b>"?><br>
+<span>User Name </span><?php echo "<b>{$_SESSION["username"]}</b>"?><br>
+<span>Student Name </span><?php echo "<b>{$_SESSION["studentName"]}</b>"?><br>
+<span>Email </span><?php echo "<b>{$_SESSION["email"]}</b>"?><br>
 <?php
     include "SessionCheck.php"
 ?>
