@@ -1,3 +1,5 @@
+<?php include("SessionCheck.php");?>
+
 <!DOCTYPE html>
 
 <!-- NB: add comments, sort formatting! -->
@@ -16,9 +18,6 @@
                 <br/>
                 <img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"><br/>
                 <br/>
-        <?php
-        include("LoadUserProfile.php");
-        ?>
 
         <h2>Create your profile</h2>
             <form action="UploadProfile.php" method="post" autocomplete="off" enctype="multipart/form-data">
