@@ -13,16 +13,20 @@ $Course = $_POST["Course"];
 $Year = $_POST["Year"];
 
 
-$sql = "INSERT INTO userprofiles (UserName, EmailAddress, Password, MobileNumber,StudentName,Course,Year) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."', '".$StudentName."', '".$Course."', '".$Year."')";
+$sql = "UPDATE userprofiles 
+SET UserName = '".$username."', 
+EmailAddress = '".$emailAddress."', 
+Password = '".$password."', 
+MobileNumber = '".$mobileNumber."'
+StudentName = '".$StudentName."',
+Course = '".$Course."',
+Year = '".$Year."',
+WHERE UserName = '".$_SESSION["username"]."'";
+;
+
 $link->query($sql);
 
-echo $username;
-echo $emailAddress;
-echo $password;
-echo $mobileNumber;
-echo $StudentName;
-echo $Course;
-echo $Year;
+$link->close(); //Close  database link
 
 $_SESSION["username"]=$username;
 header("location: ProfileUploadedSuccess.php");
