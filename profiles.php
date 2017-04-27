@@ -26,6 +26,7 @@ include("LoadUserProfile.php");
 
         <h2>Update your profile</h2>
             <form action="UploadProfile.php" method="post" autocomplete="off" enctype="multipart/form-data">
+                <input type="UserName" name="UserName" placeholder="User Name" onfocus="this.placeholder=''" onblur="this.placeholder='UserName'" required/>
             <input type="StudentName" name="StudentName" placeholder="Student Name" onfocus="this.placeholder=''" onblur="this.placeholder='StudentName'" required/>
             <input type="email" name="email" placeholder="Email Address" onfocus="this.placeholder=''" onblur="this.placeholder='Email Address'" required/>
             <input type="password" name="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" required/>
