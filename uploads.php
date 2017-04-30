@@ -1,5 +1,5 @@
 <?php
-include("SessionCheck.php");?>
+include("SessionCheck.php");
 
 if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
 {
