@@ -22,7 +22,7 @@ if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
     //include 'library/opendb.php';
     echo "$userName";
     $sql = "INSERT INTO profilepictures (userName, name, size, type, content ) ".
-        "VALUES ('$username','$fileName', '$fileSize', '$fileType', '$content')";
+        "VALUES ('$userName','$fileName', '$fileSize', '$fileType', '$content')";
 
     $result = $link->query($sql);// or die('Error, query failed');
 
