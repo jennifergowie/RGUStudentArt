@@ -20,7 +20,7 @@ if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
     }
     include 'dbConnect.php';
     //include 'library/opendb.php';
-
+    echo "$userName";
     $sql = "INSERT INTO profilepictures (userName, name, size, type, content ) ".
         "VALUES ('$username','$fileName', '$fileSize', '$fileType', '$content')";
 
