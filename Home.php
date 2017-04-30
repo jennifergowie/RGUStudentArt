@@ -17,11 +17,8 @@
         <br/>
     <h2>Welcome RGU Student Art</h2>
 
-    <?php
-        include("LoadUserProfile.php");
-        include ("LoadImages.php");
-    ?>
-    <a href ="exampleUpload.php">here</a>
+
+    <a href ="fileupload.php">here</a>
     <h4>Please click <a href="profiles.php">here </a> to edit/review your personal profile</h4>
     <h4>Please click <a href="LoadImages.php">here </a> to upload a profile picture</h4>
     <h4>Please click <a href="slideshow.php"> here </a> to edit/add a slide show</h4>

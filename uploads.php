@@ -1,6 +1,7 @@
 <?php
 if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
 {
+    $userName = $_SESSION["username"];
     $fileName = $_FILES['userfile']['name'];
     $tmpName  = $_FILES['userfile']['tmp_name'];
     $fileSize = $_FILES['userfile']['size'];
@@ -18,8 +19,8 @@ if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
     include 'dbConnect.php';
     //include 'library/opendb.php';
 
-    $sql = "INSERT INTO upload (name, size, type, content ) ".
-        "VALUES ('$fileName', '$fileSize', '$fileType', '$content')";
+    $sql = "INSERT INTO profilepictures (userName, name, size, type, content ) ".
+        "VALUES ('$username','$fileName', '$fileSize', '$fileType', '$content')";
 
     $result = $link->query($sql);// or die('Error, query failed');
 
