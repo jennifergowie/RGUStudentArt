@@ -2,7 +2,7 @@
     <footer>
         <div class="container">
             <br>
-            <p>&copy; 2017 RGUArtist.co.uk</p>
+            <center><p>&copy; 2017 RGUStudentArt.co.uk</p></center>
         </div>
     </footer>
 </html>
